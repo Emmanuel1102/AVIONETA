@@ -1,11 +1,14 @@
 
 public class AcelerarManual implements Acelerar {
 
+
+
 	@Override
-	public double acelerar(double intensidad) {
-		
-		return intensidad;
-		
+	public double acelerarM(double VelocidadInicial, double VelocidadFinal, double time) {
+	    
+		double acelerar= (VelocidadFinal-VelocidadInicial)/time;
+		return acelerar;
 	}
+
 
 }

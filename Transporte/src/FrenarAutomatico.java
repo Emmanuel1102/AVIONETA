@@ -2,7 +2,7 @@
 public class FrenarAutomatico implements Frenar {
 
 	@Override
-	public double frena(double intensidad) {
+	public double frenaM(double intensidad) {
 	
 		return intensidad;
 	}

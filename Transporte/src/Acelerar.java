@@ -1,5 +1,5 @@
 
 public interface Acelerar {
 
-	double acelerar(double intensidad);
+	double acelerarM(double VelocidadInicial,double VelocidadFinal, double time);
 }

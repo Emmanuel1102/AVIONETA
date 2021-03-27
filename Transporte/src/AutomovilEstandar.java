@@ -2,9 +2,9 @@
 public class AutomovilEstandar extends VehiculoTransporte {
 
 	
-	AutomovilEstandar(int capacidad, int peso, Frenar frenar, Acelerar acelerar, String direccion,boolean sentido, double VelocidadInicial){
+	AutomovilEstandar(int capacidad, int peso, Frenar frenar, Acelerar acelerar, String direccion,boolean sentido, double VelocidadInicial,double VelocidadFinal,double time){
 		
-		super(capacidad, peso ,frenar,acelerar,direccion,sentido,VelocidadInicial);
+		super(capacidad, peso ,frenar,acelerar,direccion,sentido,VelocidadInicial,VelocidadFinal,time);
 	    acelerar= new AcelerarManual();
 		frenar= new FrenarNormal();
 		
@@ -12,20 +12,26 @@ public class AutomovilEstandar extends VehiculoTransporte {
 	
 	
 	@Override
-	public void desplazamiento(String direccion, boolean sentido, double VelocidadInicial) {
+	public String desplazamiento(String direccion, boolean sentido, double VelocidadInicial) {
 		
+		String info = "El auto lleva la direccion" + direccion+ "Y su velocidad inicia el de" + VelocidadInicial;
+		return info;
 	}
+
 
 	@Override
-	Frenar modoFrenar() {
-		return this.frenar;
-
+	double modoFrenar(double intensidad) {
+	
+		return this.frenar.frenaM(intensidad);
 	}
+
 
 	@Override
-	Acelerar modoAcelerar() {
-		return this.acelerar;
-
+	double modoAcelerar(double VelocidadInicial, double VelocidadFinal, double time) {
+		     ////////////obj.metodo
+		return this.acelerar.acelerarM(VelocidadInicial, VelocidadFinal, time);
 	}
+
+
 
 }
