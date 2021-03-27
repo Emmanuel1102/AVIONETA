@@ -33,4 +33,10 @@ public class MotoEstandar extends VehiculoTransporte {
 	}
 
 
+
+	@Override
+	public String toString() {
+		return  "Moto Estandar \n"+"Capacidad: " + capacidad +"\n"+ "Peso:"+ peso+"\n" +"direccion:" + direccion+"\n"+ "sentido:" + sentido+"\n" + "VelocidadInicial:"
+				+ VelocidadInicial+"\n" + "VelocidadFinal:" + VelocidadFinal +"\n"+ "time:" + time ;
+	}
 }

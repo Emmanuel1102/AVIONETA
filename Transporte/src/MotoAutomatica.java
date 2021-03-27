@@ -18,7 +18,7 @@ public class MotoAutomatica extends VehiculoTransporte {
 	public String desplazamiento(String direccion, boolean sentido, double VelocidadInicial) {
 		
 	
-	  String info = "El auto lleva la direccion" + direccion+ "Y su velocidad inicia el de" + VelocidadInicial;
+	  String info = "\n"+"El auto lleva la direccion  " + direccion+ "  Y su velocidad inicia en  " + VelocidadInicial;
 		return info;
 	}
 
@@ -34,6 +34,13 @@ public class MotoAutomatica extends VehiculoTransporte {
 	
 		////////////     obj.metodo
 		return this.acelerar.acelerarM(VelocidadInicial, VelocidadFinal, time);
+	}
+
+
+	@Override
+	public String toString() {
+		return  "Moto Automatica\n"+"Capacidad: " + capacidad +"\n"+ "Peso:"+ peso+"\n" +"direccion:" + direccion+"\n"+ "sentido:" + sentido+"\n" + "VelocidadInicial:"
+				+ VelocidadInicial+"\n" + "VelocidadFinal:" + VelocidadFinal +"\n"+ "time:" + time ;
 	}
 
 }
